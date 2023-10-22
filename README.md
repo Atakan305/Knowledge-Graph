@@ -7,7 +7,7 @@ A multidisciplinary working system was followed in the process of creating the K
 -	Visualization using Matplotlib library
 -	Reporting the emerging knowledge graph
 
-# Main Steps
+## Main Steps
 1.	Getting GitHub Repository Information: At project startup, the GitHub API is used to pull basic information from the user-specified GitHub repository:
 - Files
 - Folders
