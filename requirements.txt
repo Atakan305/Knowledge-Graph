@@ -1,0 +1,9 @@
+os
+networkx
+matplotlib
+subprocess
+requests
+
+----For testing on Neo4j Server----
+
+neo4j>=5.12.0
