@@ -19,3 +19,4 @@ A multidisciplinary working system was followed in the process of creating the K
 
 ![image](https://github.com/Atakan305/Knowledge-Graph/assets/76012121/fb88488d-64d8-4d35-889a-2d8007fed38b)
 
+In addition, for a further step, this project may also added to Neo4j server and it's possible to analyze the created knowledge graph. On this knowledge graph, queries can be written in the Neo4j DBMS and the captured data can be further interpreted. 
