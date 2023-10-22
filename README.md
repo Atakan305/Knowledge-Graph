@@ -6,3 +6,13 @@ A multidisciplinary working system was followed in the process of creating the K
 -	Processing and analyzing fetched data
 -	Visualization using Matplotlib library
 -	Reporting the emerging knowledge graph
+
+Main Steps
+1.	Getting GitHub Repository Information: At project startup, the GitHub API is used to pull basic information from the user-specified GitHub repository:
+o	Files 
+o	Folders
+o	Services
+o	Backbone
+2.	Data Analysis and Processing: The captured data is analyzed and processed in Python. In particular, certain data may need to be selected and processed.
+3.	Creating a Knowledge Graph with Matplotlib: The processed data was represented as a graph using Matplotlib.
+4.	Commissioning of Access Tools: In order to run the main functions mentioned above, this last step aims to enter personal access tokens and other information and ensure successful data flow.
