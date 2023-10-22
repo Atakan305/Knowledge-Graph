@@ -1,4 +1,4 @@
-# Creating Knowledge Graph According to any Github Repository Data
+# Creating a Knowledge Graph with Fetched from Any Github Repository Data
 Creating a knowledge graph from any Github repository.
 
 A multidisciplinary working system was followed in the process of creating the Knowledge Graph. According to this, the project aims to create knowledge graphs by pulling data from a specific GitHub repository using GitHub REST API v3 and Matplotlib libraries. The Knowledge Graph creation project includes the following main steps:
