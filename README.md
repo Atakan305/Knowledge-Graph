@@ -54,3 +54,12 @@ def extract_relationships(code, language):
 
 
 In addition, for a further step, this project may also added to Neo4j server and it's possible to analyze the created knowledge graph. On this knowledge graph, queries can be written in the Neo4j DBMS and eventually the fetched data can be further interpreted. 
+you can run the file and connect to the Neo4j browser with this command:
+```
+python src/neo4j_kg_upload.py
+```
+and you can customize the queries according to your files and relationships via changing this code block:
+```
+
+```
+
