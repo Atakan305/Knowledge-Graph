@@ -9,14 +9,13 @@ A multidisciplinary working system was followed in the process of creating the K
 -	Creating a knowledge graph based on analyzed and extracted information
 
 ## Main Steps
-1.	Getting GitHub Repository Information: At project startup, the GitHub API is used to pull basic information from the user-specified GitHub repository:
-- Files
-- Folders
-- Services
-- Backbone
-2.	Data Analysis and Processing: The captured data is analyzed and processed in Python. In particular, certain data may need to be selected and processed.
-3.	Creating a Knowledge Graph with Matplotlib: The processed data was represented as a graph using Matplotlib.
-4.	Commissioning of Access Tools: In order to run the main functions mentioned above, this last step aims to enter personal access tokens and other information and ensure successful data flow.
+The primary objectives of this project were as follows:
+1. Analyze code files written in Python and MATLAB to extract relationships between entities.
+2. Create a knowledge graph representing these relationships.
+3. Import the knowledge graph into a Neo4j database for querying and visualization.
+
+The code analysis component involves parsing source code files written in Python and MATLAB to extract relationships between entities. The relationships include function calls, object creations, variable assignments, class definitions, module imports, dataflow, database connections, and API calls. The extracted relationships are categorized based on their type.
+-
 
 ![knowledge_graph](https://github.com/Atakan305/Knowledge-Graph/assets/76012121/699e38ff-bcef-4248-b03b-cb010347f641)
 
