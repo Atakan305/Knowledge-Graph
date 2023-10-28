@@ -60,7 +60,7 @@ python src/neo4j_kg_upload.py
 ```
 and you can customize the queries according to your files and relationships via changing this code block:
 ```
-def import_knowledge_graph(self, tx, graph_file):
+    def import_knowledge_graph(self, tx, graph_file):
         # Open the knowledge graph file and read its content
         with open(graph_file, 'r') as f:
             knowledge_graph_data = f.read()
@@ -85,3 +85,4 @@ def import_knowledge_graph(self, tx, graph_file):
                 tx.run(cypher_query, source_node=source_node, target_node=target_node)
 ```
 
+In conclusion, this project aims to extracting relationships from source code files, constructing a knowledge graph, and importing it into a Neo4j database. The resulting knowledge graph can be used for various applications, including code analysis, visualization, and querying. 
