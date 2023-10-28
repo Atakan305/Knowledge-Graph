@@ -16,11 +16,11 @@ The primary objectives of this project were as follows:
 
 The code analysis component involves parsing source code files written in Python and MATLAB to extract relationships between entities. The relationships include function calls, object creations, variable assignments, class definitions, module imports, dataflow, database connections, and API calls. The extracted relationships are categorized based on their type.
 
-
 ![knowledge_graph](https://github.com/Atakan305/Knowledge-Graph/assets/76012121/699e38ff-bcef-4248-b03b-cb010347f641)
 
 This knowledge graph is created with running the main.py file. By running the same file, the graphic can be displayed in a larger area, the quality of its appearance can be increased, and it can be customized according to personal needs.
 
 $ python main.py
+
 
 In addition, for a further step, this project may also added to Neo4j server and it's possible to analyze the created knowledge graph. On this knowledge graph, queries can be written in the Neo4j DBMS and eventually the fetched data can be further interpreted. 
