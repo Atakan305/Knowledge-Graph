@@ -25,7 +25,31 @@ python main.py
 ```
 for customizing the relationships between code files you can change this block in main.py file:
 ```
-
+def extract_relationships(code, language):
+    relationships = []
+    if language == "python":
+        # Extract object creation, variable assignments, class definitions, module imports, dataflow, database connections, and API calls
+        object_creations = re.findall(r'(\w+)\s*=\s*(\w+)\(.+\)', code)
+        variable_assignments = re.findall(r'(\w+)\s*=\s*.+', code)
+        class_definitions = re.findall(r'classdef\s+(\w+)', code)
+        module_imports = re.findall(r'py.importlib.import_module\(\"(\w+)\"\)', code)  # Assuming this pattern for Python module imports
+        dataflow = re.findall(r'(\w+)\s*=\s*(\w+)\(.+\)', code)  # Extract source and target from dataflow
+        database_connections = re.findall(r'\w+\(.+\)', code)  # Assuming this pattern for database connections
+        api_calls = re.findall(r'(\w+)\(.+\)', code)  # Extract only function names as API calls
+        # Add a custom "type" based on your criteria, for example, function names
+        relationships.extend((source, target, "function") for source, target in object_creations)
+        relationships.extend((source, target, "variable") for source in variable_assignments)
+        relationships.extend((source, target, "class") for source, target in class_definitions)
+        relationships.extend((source, target, "module") for source in module_imports)
+        relationships.extend((source, target, "function") for source, target in dataflow)
+        relationships.extend((source, target, "database") for source in database_connections)
+        relationships.extend((source, function_name, "api") for function_name in api_calls)
+    elif language == "matlab":
+        # Extract relationships from MATLAB code (customize for your specific MATLAB code structure)
+        class_definitions = re.findall(r'classdef\s+(\w+)', code)
+        function_modules = re.findall(r'function\s+(\w+)', code)
+        relationships.extend((source, target, "class") for source in class_definitions for target in function_modules)
+    return relationships
 ```
 
 
