@@ -1,10 +1,10 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# Create a new Graph
+#Create a new Graph
 G = nx.DiGraph()
 
-# Variables, classes, functions, and modules
+#Variables, classes, functions, and modules
 variables = [
     ("dataset_raw", {"type": "variable"}),
     ("LICENCE", {"type": "variable"}),
@@ -33,13 +33,13 @@ modules = [
     ("prediction.m", {"type": "module"}),
 ]
 
-# Add variables, classes, functions, and modules to the graph
+#Add variables, classes, functions, and modules to the graph
 G.add_nodes_from(variables)
 G.add_nodes_from(classes)
 G.add_nodes_from(functions)
 G.add_nodes_from(modules)
 
-# Define relationships within the code
+#Define relationships within the code
 relationships = [
     ("extract_mnist", "numpy", {"type": "uses", "description": "uses numpy"}),
     ("extract_mnist", "cv2", {"type": "uses", "description": "uses cv2"}),
@@ -61,10 +61,10 @@ relationships = [
 
 G.add_edges_from(relationships)
 
-# Draw the graph
+#Draw the knowledge graph
 pos = nx.spring_layout(G, seed=42)
 
-# Make nodes and edges more detailed
+#Make nodes and edges more detailed
 node_colors = {
     "variable": "lightblue",
     "class": "lightgreen",
@@ -86,7 +86,7 @@ edges = nx.draw_networkx_edges(G, pos, edge_color=[edge_colors[data["type"]] for
 labels = nx.draw_networkx_labels(G, pos, labels=node_labels)
 edge_labels = nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
 
-# Improve the readability of the graph
+#Improve the readability of the graph
 plt.legend(node_colors.values(), node_colors.keys(), title="Node Types")
 plt.legend(edge_colors.values(), edge_colors.keys(), title="Edge Types")
 plt.title("Detailed Information Graph")
