@@ -17,7 +17,7 @@ A multidisciplinary working system was followed in the process of creating the K
 3.	Creating a Knowledge Graph with Matplotlib: The processed data was represented as a graph using Matplotlib.
 4.	Commissioning of Access Tools: In order to run the main functions mentioned above, this last step aims to enter personal access tokens and other information and ensure successful data flow.
 
-![image](https://github.com/Atakan305/Knowledge-Graph/assets/76012121/fb88488d-64d8-4d35-889a-2d8007fed38b)
+![knowledge_graph](https://github.com/Atakan305/Knowledge-Graph/assets/76012121/699e38ff-bcef-4248-b03b-cb010347f641)
 
 This knowledge graph is created with running the main.py file. By running the same file, the graphic can be displayed in a larger area, the quality of its appearance can be increased, and it can be customized according to personal needs.
 
