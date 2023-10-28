@@ -23,5 +23,10 @@ This knowledge graph is created with running the main.py file. By running the sa
 ```
 python main.py
 ```
+for customizing the relationships between code files you can change this block in main.py file:
+```
+
+```
+
 
 In addition, for a further step, this project may also added to Neo4j server and it's possible to analyze the created knowledge graph. On this knowledge graph, queries can be written in the Neo4j DBMS and eventually the fetched data can be further interpreted. 
