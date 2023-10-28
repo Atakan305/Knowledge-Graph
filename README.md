@@ -60,6 +60,28 @@ python src/neo4j_kg_upload.py
 ```
 and you can customize the queries according to your files and relationships via changing this code block:
 ```
+def import_knowledge_graph(self, tx, graph_file):
+        # Open the knowledge graph file and read its content
+        with open(graph_file, 'r') as f:
+            knowledge_graph_data = f.read()
 
+        lines = knowledge_graph_data.split('\n')
+
+        for line in lines:
+            parts = line.split(',')
+            if len(parts) == 3:
+                source_node, target_node, relationship_type = parts[0], parts[1], parts[2]
+
+                # Customize the import logic to match your knowledge graph data structure
+                # For example, create nodes and relationships in Neo4j based on the parsed data
+                # You may need to use Cypher queries for this task
+                # For example, create a query with using Cypher. 
+                cypher_query = (
+                    f"MERGE (source:Node {{name: $source_node}})"
+                    f"MERGE (target:Node {{name: $target_node}})"
+                    f"MERGE (source)-[:{relationship_type}]->(target)"
+                )
+
+                tx.run(cypher_query, source_node=source_node, target_node=target_node)
 ```
 
