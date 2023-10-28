@@ -9,7 +9,7 @@ class KnowledgeGraphImporter:
         self._driver.close()
 
     def import_knowledge_graph(self, tx, graph_file):
-        # Open the knowledge graph file and read its content
+        #Open the knowledge graph file and read its content
         with open(graph_file, 'r') as f:
             knowledge_graph_data = f.read()
 
@@ -33,12 +33,12 @@ class KnowledgeGraphImporter:
                 tx.run(cypher_query, source_node=source_node, target_node=target_node)
     
 def main():
-    # Define the Neo4j connection details
+    #Define the Neo4j connection details
     neo4j_uri = "neo4j://localhost:7687"
     neo4j_user = "neo4j"
     neo4j_password = "your_password"
 
-    # Define the path to your knowledge graph file
+    #Define the path to your knowledge graph file
     knowledge_graph_file = "knowledge_graph.txt"
 
     importer = KnowledgeGraphImporter(neo4j_uri, neo4j_user, neo4j_password)
