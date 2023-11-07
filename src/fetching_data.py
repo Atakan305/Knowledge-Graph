@@ -4,9 +4,9 @@ from zipfile import ZipFile
 from io import BytesIO
 
 #Enter the information that you want to fetch from
-github_user = 'akdenizz'
-github_repo = 'mnist_classification'
-github_token = "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"
+github_user = 'user'
+github_repo = 'repo'
+github_token = "your_personal_github_token"
 
 #Request headers
 headers = {
